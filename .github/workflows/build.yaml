@@ -9,7 +9,7 @@ on:
 
 jobs:
   build:
-    uses: krech-et/kse-labs-trusted-workflows/blob/main/.github/workflows/go-ci.yaml@main
+    uses: krech-et/kse-labs-trusted-workflows/.github/workflows/go-build.yaml@main
     secrets: inherit
     with:
       go-version: '1.21'
