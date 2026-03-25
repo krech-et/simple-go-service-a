@@ -13,9 +13,10 @@ jobs:
     secrets: inherit
     with:
       go-version: '1.21'
+      
   ci-status:
     name: CI Status
-    runs-on: ubuntu-latest
+    runs-on: self-hosted # <--- ЗМІНИЛИ ОСЬ ТУТ
     needs: [build]
     if: always()
     steps:
@@ -24,4 +25,4 @@ jobs:
           if [ "${{ needs.build.result }}" != "success" ]; then
             echo "CI failed"
             exit 1
-          fi      
+          fi
